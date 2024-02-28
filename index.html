@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bistup</title>
+    <link rel="icon" type="image" href="img/Smile.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <style>
+        *{ margin:0; padding:0;}
+        html{scroll-behavior:smooth;}
+        p{ line-height:normal; opacity:1;}
+/* ------------------------------------------------------------------------------------------------- */
+        #t1{ height:0.5in; width:96%; background-color:black; padding:0 2%;}
+        #t1 ul li{display: inline; line-height: 0.5in; border-left:1px solid white; padding:0 0.3cm;}
+        .tl{ float: left; color: white;}
+        .tr{ float: right; margin-left: 1cm; color: white;}
+/* ------------------------------------------------------------------------------------------------- */
+        .t2{ height:1.5cm; width:96%; padding:1.5cm 2%;}
+        .t2 ul li{ display: inline-block; padding:0 0 0 1.7in;}
+        li select{ height:1.5cm; width:2.5in; border-radius:20px;}
+/* ------------------------------------------------------------------------------------------------- */
+        nav{ height:0.7in; width: 96%; display: inline-block; line-height: 0.7in; background-color:skyblue; padding:0 2%;}
+        nav a{ text-decoration: none; margin-left:0.7cm; color: white;}
+        nav a:hover{ color:black;}
+ /*-------------------------------------------------------------------------------------------------  */
+        .s1{ height:100vh; width:100%; background-image:url("img/bg-bord.png"); background-size:cover;}
+        .s1-mater{ height:100vh; width:92%; padding: 1.5in 4%;}
+        .s1-mater h1{font-size:25px; color: white;}
+        .s1-mater h2{font-size:60px; color:white;}
+        .s1-mater h3{color:white;}
+        .s1-mater button{ padding:0.2cm 0.5cm; width:auto;background-color: skyblue; border-radius: 10px; border:none; color:white;}
+/* --------------------------------------------------------------------------------------------------- */
+        .s2{ height:0.5in; width:100%; text-align:center; padding:1cm 0;}
+/* ------------------------------------------------------------------------------------------------- */
+        .s3{ height:3.5in; width:100%; padding:1cm 0; text-align: center;}
+        .o1{ height:3.5in; width:29%; float: left; margin-left:3.5%; background-color:white; box-shadow: 0px 0px 5px 0px rgb(212, 208, 208);}
+        .o2{ height:3.5in; width:29%; float:right; margin-right:3%; background-color:white; box-shadow: 0px 0px 5px 0px rgb(212, 208, 208);}
+/* ------------------------------------------------------------------------------------------------- */
+        .s4{ height:0.5in; width:100%; text-align:center; padding:1cm 0;}
+/* ------------------------------------------------------------------------------------------------- */
+        .s5{ height:110vh; width:99%; margin-bottom:0.5in;}
+        .fv1{ background-image:url('img/b-cover.png');  height:3in; width:3.5in; background-size: cover; float: left; margin-left:1.3cm; margin-top:1cm;}
+        .fv2{ background-image:url('img/b-cover.png');  height:3in; width:3.5in; background-size: cover; float: right; margin-right:1.2cm; margin-top:1cm;}
+        .i{ height:3in; width:3.5in;color:white; display:none;}
+        .fv1:hover .i{ display:block;}
+        .fv2:hover .i{ display:block;}
+        
+/* ------------------------------------------------------------------------------------------------- */
+        .s6{ height:2in; width:96%; padding:0 2%; background-color:black; }
+        .sl{ float:left; height:2in; width:68%; line-height:2in; color:white;}
+        .sl h1{ font-size:30px;}
+        .sr{ float:right; height:2in; width:28%; line-height:2in; text-align:right;}
+        .sr button{ background-color:skyblue; color: white; width:2.5in; height:1.5cm; border-radius:10px;}
+/* ------------------------------------------------------------------------------------------------- */
+        .s8{ height:3.5in; width:100%; padding:1cm 0;}
+        .e1{ height:3.5in; width:29%; float: left; margin-left:1cm;}
+        .e1 a{ text-decoration:none; color: skyblue;}
+        .e2{ height:3.5in; width:29%; float:right; margin-right:1cm;}
+        .e2 a{ text-decoration:none; color: skyblue;}
+/* ------------------------------------------------------------------------------------------------- */
+        .s9{ height: 3in; width:100%; background-color: aquamarine; line-height:4in;}
+        .s9 ul li{ display:inline-block; margin-left: 1cm;}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+        .slider{ height:1cm; width:1cm; background-color:#b0b435;line-height:1cm; text-align:center; position:fixed; bottom:0.5in; right:0.5in; }
+        .slider a{ color: white; text-decoration: none; background-color:transparent; border:none; font-size:20px; width:100%; height:100%;}
+        .slider a:hover{ background-color:white; color:black;}
+/* -------------------------------------------------------------------------------------------------- */
+        .f1{ height:3.8in; width:96%; background-color:rgb(19, 149, 230); padding:1cm 2% }
+        .f{ height: auto; width: 25%; float: left;  line-height:1cm;}
+        .fd{ height: auto; width: 25%; margin-left:75%; line-height:1cm;}
+        input{ color: white; background-color:white; border:1px solid white; border-radius:20px; line-height: 1cm;}
+        ul{list-style: none; }
+        button{ line-height:0.4in; width:1.3in; border-radius: 10px; border:none; color:white; background-color:skyblue;}
+/* --------------------------------------------------- */
+        .f2{ height:0.7in; width:94%; line-height:0.7in; padding:0 3%; color:white; background-color:rgb(16, 16, 175 ,0.7);}
+        .fl{ float: left;}
+        .fr{ float: right;}
+    </style>
+</head>
+<!-- ---------------------------------------------------------- -->
+<body>
+    <!-- <section> -->
+        <header>
+            <section id="t1">
+                <ul class="tl">
+                    <li style="border:none;"></li>
+                    <li> ABOUT</li>
+                    <li> CONTACT</li>
+                    <li> LOGIN</li>
+                    <li> REGISTER</li>
+                </ul>
+                <ul class="tr">
+                    <li style="border:none;">+00 (123) 456 7890</li>
+                    <li> INFO@DOMAIN.COM</li>
+                </ul>
+            </section>
+            <section class="t2">
+                <ul>
+                    <li style="padding-left:1cm;"> <h2>Bistup</h2> <p>vestibulum amet</p> </li>
+                    <li> <h2>Call Us:</h2> <p>+00 (123) 456 7890</p></li>
+                    <li> <h2>Mon. - Sat.:</h2> <p>08.00am - 18.00pm</p></li>
+                    <li>
+                        <select>
+                            <option value=" Language">Language</option>
+                            <option value="English">Default</option>
+                            <option value="German">German</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="Spanish">French</option>
+                          </select>
+                    </li>
+                </ul>
+            </section>
+        </header>
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+
+        <nav>
+            <a href=""> HOME</a>
+            <a href=""> PAGES</a>
+            <!-- <select>
+                <option>Gallery</option>
+                <option>Full width</option>
+                <option>Sidebar Left</option>
+                <option>Sidebar Right</option>
+                <option>Basic Grid</option>
+                <option>Font Icons</option>
+            </select> -->
+
+            <label><a href="">DROPDOWN</a></label>
+            <!-- <select>
+                <option>Level 2</option>
+                <option>Level 2 + Drop</option>
+                        <select>
+                            <option> Level 3</option>
+                            <option> Level 3</option>
+                            <option> Level 3</option>
+                        </select>
+                <option>Level 2</option>
+            </select> -->
+
+            <a href=""> LINK TEXT</a>
+            <a href=""> LINK TEXT</a>
+            <a href=""> LINK TEXT</a>
+            <a href=""> LONG LINK TEXT</a>
+        </nav>
+
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+        <section class="s1">
+        <section class="s1-mater">
+            <h1>AMET NUNC ET ACCUMSAN BLANDIT</h1>
+            <br>
+            <h2>Metus Purus Pharetra Sit</h2>
+            <br>
+            <h3>Tempor praesent eu orci sodales sagittis neque eget consectetur</h3>
+            <br>
+            <button>FRINGILLA EST PHARETRA</button>
+        </section>
+        </section>
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+        <section class="s2">
+            <h1>Erat Etiam Aliquet Diam Nec Purus</h1>
+            <p>Vitae porta purus hendrerit mauris elementum nibh et placerat</p>
+        </section>
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+        <section class="s3">
+            <section class="o1">
+                
+                <br>
+                <h2>Pretium Ante Libero</h2>
+                <br><br>
+                <p>Cursus massa nec vehicula nunc neque et <br> risus mauris rhoncus at justo ac lacinia <br> maecenas […]</p>
+                <br><br>
+                <button>READ MORE</button>
+            </section>
+            <section class="o1">
+                
+                <br>
+                <h2>Malesuada Justo Metus</h2>
+                <br><br>
+                <p>Sit amet ornare enim tempus sed nec <br> consequat quam nam viverra purus ac <br> justo iaculis facilisis […]</p>
+                <br><br>
+                <button>READ MORE</button>
+            </section>
+            <section class="o2">
+
+                <br>
+                <h2>Vivamus Tempor Bibendum</h2>
+                <br><br>
+                <p>Dolor quis pretium metus vehicula id <br> praesent ac dolor condimentum dapibus <br> erat eget placerat […]</p>
+                <br><br>
+                <button>READ MORE</button>
+            </section>
+        </section>
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+        <section class="s4">
+            <h1>Metus Vestibulum Fermentum</h1>
+            <p>Neque vel malesuada ultrices mi est vulputate ex sit amet</p>
+        </section>
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+        <section class="s5">
+            
+                    <div class="fv1">
+                        <div class="i">
+                            <h2>Posuere Nisl Lorem</h2>
+                            <br>
+                            <p>Nisi egestas nunc nibh urna molestie in <br> gravida vel tincidunt.</p>
+                        </div>
+                    </div>
+               
+                    <div class="fv1">
+                        <div class="i">
+                            <h2>Curabitur Vestibulum</h2>
+                            <br>
+                            <p>Id metus aliquam id fringilla dui <br> duis scelerisque sed mi.</p>
+                        </div>
+                    </div>
+               
+                    <div class="fv2">
+                        <div class="i">
+                            <h2>Hendrerit Leo Vestibulum</h2>
+                            <br>
+                            <p>Sed varius sed ex eros accumsan eget nisl a laoreet porta.</p>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="fv1">
+                        <div class="i">
+                            <h2>Posuere Nisl Lorem</h2>
+                            <br>
+                            <p>Nisi egestas nunc nibh urna molestie in <br> gravida vel tincidunt.</p>
+                        </div>
+                    </div>
+               
+                    <div class="fv1">
+                        <div class="i">
+                            <h2>Curabitur Vestibulum</h2>
+                            <br>
+                            <p>Id metus aliquam id fringilla dui <br> duis scelerisque sed mi.</p>
+                        </div>
+                    </div>
+               
+                    <div class="fv2">
+                        <div class="i">
+                            <h2>Hendrerit Leo Vestibulum</h2>
+                            <br>
+                            <p>Sed varius sed ex eros accumsan eget nisl a laoreet porta.</p>
+                        </div>
+                    </div>
+                
+        </section>
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+        <section class="s6">
+            <section class="sl"> <h1>Dis Parturient Montes Nascetur Ridiculus Mus Vivamus</h1></section>
+            <section class="sr"> <button>PORTA RISUS PURUS</button></section>
+        </section>
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+        <section class="s4">
+            <h1>Metus Vestibulum Fermentum</h1>
+            <p>Neque vel malesuada ultrices mi est vulputate ex sit amet</p>
+        </section>
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+        <section class="s8">
+            <section class="e1">
+
+                <p> 06th April 2045 @ 15:00pm</p>
+                <br>
+                <h2>Ac Finibus Purus Pulvinar Quis <br> Suspendisse Varius</h2>
+                <br>
+                <p>condimentum sem ac euismod tortor semper sit <br> amet fusce pretium justo nec faucibus finibus <br> libero odio porttitor magna et semper mi velit <br> maximus nisi nullam accumsan massa […]</p>
+                <br>
+                <a href="">Admin</a> <b>|</b> <a href=""> Tag 1, Tag 2</a>
+                <br><br><br>
+                <button>READ MORE</button>
+            </section>
+            <section class="e1">
+
+                <p> 06th April 2045 @ 15:00pm</p>
+                <br>
+                <h2>Ac Finibus Purus Pulvinar Quis <br> Suspendisse Varius</h2>
+                <br>
+                <p>condimentum sem ac euismod tortor semper sit <br> amet fusce pretium justo nec faucibus finibus <br> libero odio porttitor magna et semper mi velit <br> maximus nisi nullam accumsan massa […]</p>
+                <br>
+                <a href="">Admin</a> <b>|</b> <a href=""> Tag 1, Tag 2</a>
+                <br><br><br>
+                <button>READ MORE</button>
+            </section>
+            <section class="e2">
+
+                <p> 06th April 2045 @ 15:00pm</p>
+                <br>
+                <h2>Ac Finibus Purus Pulvinar Quis <br> Suspendisse Varius</h2>
+                <br>
+                <p>condimentum sem ac euismod tortor semper sit <br> amet fusce pretium justo nec faucibus finibus <br> libero odio porttitor magna et semper mi velit <br> maximus nisi nullam accumsan massa […]</p>
+                <br>
+                <a href="">Admin</a> <b>|</b> <a href=""> Tag 1, Tag 2</a>
+                <br><br><br>
+                <button>READ MORE</button>
+            </section>
+        </section>
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+
+        <section class="s9">
+            <ul>
+                <li><img src="img/b-slide.png"></li>
+                <li><img src="img/b-slide.png"></li>
+                <li><img src="img/b-slide.png"></li>
+                <li><img src="img/b-slide.png"></li>
+            </ul>
+        </section>
+
+<!-- --------------------------------------------------------------------------------------- -->
+        <div class="slider">
+            <a href="#t1">&uArr;</a>
+        </div>
+<!-- ----------------------------------------------------------------------------------------------------------------- -->
+        <footer>
+            <section class="f1">
+                <section class="f">
+                    <ul>
+                        <li><h3>Nulla Ullamcorper </h3></li>
+                        <br>
+                        <li><p>Street Name & Number, <br> Town, Postcode/Zip </p></li>
+                        <br>
+                        <li>+00 (123) 456 7890</li>
+                        <li>info@domain.com</li>
+                    </ul>
+                </section>
+                <section class="f">
+                    <ul>
+                        <li><h3>Dignissim Nibh Ut </h3></li>
+                        <br>
+                        <li>Natoque penatibus et magnis</li>
+                        <li>Dis parturient montes</li>
+                        <li>Nascetur ridiculus mus</li>
+                        <li>Vestibulum tincidunt nisi</li>
+                        <li>Sed eleifend scelerisque</li>
+                    </ul>
+                </section>
+                <section class="f">
+                    <ul>
+                        <li><h3>Vestibulum Cras Placerat </h3></li>
+                        <br>
+                        <li>Maecenas vestibulum molestie</li>
+                        <li>Arcu cras sed tincidunt</li>
+                        <li>Enim maecenas sed mi dictum</li>
+                        <li>Dolor laoreet fringilla</li>
+                        <li>Augue curabitur lobortis</li>
+                    </ul>
+                </section>
+                <section class="fd">
+                    <ul>
+                        <li><h3>Vulputate Cum Sociis </h3></li>
+                        <br>
+                        <li><p>Diam nulla id condimentum magna <br> scelerisque ac suspendisse viverra <br>est purus.</p></li>
+                        <br>
+                        <li> <input type="text" placeholder="Name"></li>
+                        <br>
+                        <li><input type="text" placeholder="Email"></li>
+                        <br>
+                        <li><button>Submit</button></li>
+                    </ul>
+                </section>
+            </section>
+
+            <section class="f2">
+                <section class="fl">Copyright © 2018 - All Rights Reserved - Domain Name</section>
+                <section class="fr">Template by OS Templates</section>
+            </section>
+
+         </footer>
+
+    <!-- </section> -->
+</body>
+</html>
